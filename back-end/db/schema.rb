@@ -10,18 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_06_191654) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_06_202717) do
   create_table "admins", force: :cascade do |t|
     t.string "name"
     t.string "username"
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
   create_table "event_lists", force: :cascade do |t|
     t.string "title"
-    t.string "type"
+    t.string "eventType"
     t.integer "admin_id", null: false
     t.integer "event_id", null: false
     t.datetime "created_at", null: false

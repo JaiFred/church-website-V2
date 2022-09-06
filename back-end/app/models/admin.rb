@@ -1,4 +1,4 @@
 class Admin < ApplicationRecord
-    has_many :eventlists
-    has_many :events, through: eventlists:
+    has_many :eventLists
+    has_many :event, through: :eventLists
 end
