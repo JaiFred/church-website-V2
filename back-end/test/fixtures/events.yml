@@ -5,13 +5,13 @@ one:
   activity: MyString
   description: MyText
   location: MyString
-  start_date: 2022-09-06 14:59:58
-  end_date: 2022-09-06 14:59:58
+  starts: 2022-09-06 15:16:54
+  ends: 2022-09-06 15:16:54
 
 two:
   title: MyString
   activity: MyString
   description: MyText
   location: MyString
-  start_date: 2022-09-06 14:59:58
-  end_date: 2022-09-06 14:59:58
+  starts: 2022-09-06 15:16:54
+  ends: 2022-09-06 15:16:54
