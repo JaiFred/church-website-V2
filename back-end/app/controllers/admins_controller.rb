@@ -1,4 +1,6 @@
 class AdminsController < ApplicationController
+    skip_before_action :authenticate_admin, only: [:show]
+
     def index
         render json: Admin.all 
     end
@@ -7,11 +9,21 @@ class AdminsController < ApplicationController
     def show 
         current_admin = Admin.find(session[:admin_id])
         if current_admin
-            render json: current_admin, serializer: MemberSerializer, status: :ok
+            render json: current_admin, status: :ok
         else
             render json: { errors: "No Active Sessions" }, status: :unauthorized #401
         end
 
+    end
+
+    private
+
+    # t.string :name
+    # t.string :username
+    # t.string :email
+
+    def admin_params
+        params.permit(:username, :password, :password_confirmation)
     end
 
 end
