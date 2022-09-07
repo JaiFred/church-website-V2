@@ -1690,3 +1690,178 @@ Migrating to AddPasswordDigestToAdmins (20220906202717)
   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
   [1m[36mEventList Load (0.2ms)[0m  [1m[34mSELECT "event_lists".* FROM "event_lists"[0m
   [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."username" = ? LIMIT ?[0m  [["username", "CharlesDW"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."title" = ? AND "events"."location" = ? AND "events"."starts" = ? LIMIT ?[0m  [["title", "Morning Prayer"], ["location", "Main Room"], ["starts", "2022-08-30 00:00:00"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."title" = ? AND "events"."location" = ? AND "events"."starts" = ? LIMIT ?[0m  [["title", "Community Gardening"], ["location", "Reston"], ["starts", "2022-09-01 00:00:00"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."title" = ? AND "events"."location" = ? AND "events"."starts" = ? LIMIT ?[0m  [["title", "Community Jungle Gym Fundraiser"], ["location", "Herndon"], ["starts", "2022-02-14 00:00:00"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."title" = ? AND "events"."location" = ? AND "events"."starts" = ? LIMIT ?[0m  [["title", "Late Service"], ["location", "Main Room"], ["starts", "2022-08-26 00:00:00"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."title" = ? AND "events"."location" = ? AND "events"."starts" = ? LIMIT ?[0m  [["title", "Weekend Potluck"], ["location", "Franklin Park"], ["starts", "2022-09-16 00:00:00"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEventList Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "event_lists" WHERE "event_lists"."title" = ? AND "event_lists"."title" = ? AND "event_lists"."eventType" = ? LIMIT ?[0m  [["title", "Prayers"], ["title", "Prayers"], ["eventType", "General Service"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."title" = ? AND "events"."location" = ? AND "events"."starts" IS NULL LIMIT ?[0m  [["title", "greeting"], ["location", "MR"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."title" = ? AND "events"."location" = ? AND "events"."starts" = ? LIMIT ?[0m  [["title", "greeting"], ["location", "MR"], ["starts", "0001-01-11 00:00:00"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."title" = ? AND "events"."location" = ? AND "events"."starts" = ? LIMIT ?[0m  [["title", "greeting"], ["location", "MR"], ["starts", "0001-01-11 00:00:00"], ["LIMIT", 1]]
+  [1m[36mEvent Create (6.4ms)[0m  [1m[32mINSERT INTO "events" ("title", "activity", "description", "location", "starts", "ends", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "greeting"], ["activity", "rg"], ["description", "d"], ["location", "MR"], ["starts", "0001-01-11 00:00:00"], ["ends", "0001-01-11 00:00:00"], ["created_at", "2022-09-07 20:23:56.149187"], ["updated_at", "2022-09-07 20:23:56.149187"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEventLists (20220906202233)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "event_lists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "eventType" varchar, "admin_id" integer NOT NULL, "event_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_66d5198880"
+FOREIGN KEY ("admin_id")
+  REFERENCES "admins" ("id")
+, CONSTRAINT "fk_rails_b87113e4f2"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_event_lists_on_admin_id" ON "event_lists" ("admin_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_event_lists_on_event_id" ON "event_lists" ("event_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220906202233"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEvents (20220906202343)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "activity" varchar, "description" text, "location" varchar, "starts" datetime(6), "ends" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220906202343"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAdmins (20220906202503)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "username" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220906202503"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPasswordDigestToAdmins (20220906202717)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "admins" ADD "password_digest" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220906202717"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-09-07 20:25:44.353366"], ["updated_at", "2022-09-07 20:25:44.353366"]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."username" = ? LIMIT ?[0m  [["username", "CharlesDW"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."username" = ? LIMIT ?[0m  [["username", "CharlesDW"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (0.5ms)[0m  [1m[32mINSERT INTO "admins" ("name", "username", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Charles"], ["username", "CharlesDW"], ["email", "CharlesDW@gmail.com"], ["created_at", "2022-09-07 20:29:16.331730"], ["updated_at", "2022-09-07 20:29:16.331730"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."title" = ? AND "events"."location" = ? AND "events"."starts" = ? LIMIT ?[0m  [["title", "Morning Prayer"], ["location", "Main Room"], ["starts", "2022-08-30 00:00:00"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."username" = ? LIMIT ?[0m  [["username", "CharlesDW"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEventLists (20220906202233)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "event_lists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "eventType" varchar, "admin_id" integer NOT NULL, "event_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_66d5198880"
+FOREIGN KEY ("admin_id")
+  REFERENCES "admins" ("id")
+, CONSTRAINT "fk_rails_b87113e4f2"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_event_lists_on_admin_id" ON "event_lists" ("admin_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_event_lists_on_event_id" ON "event_lists" ("event_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220906202233"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEvents (20220906202343)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "activity" varchar, "description" text, "location" varchar, "starts" datetime(6), "ends" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220906202343"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAdmins (20220906202503)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "username" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220906202503"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPasswordDigestToAdmins (20220906202717)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "admins" ADD "password_digest" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220906202717"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-09-07 20:30:05.359235"], ["updated_at", "2022-09-07 20:30:05.359235"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."username" = ? LIMIT ?[0m  [["username", "CharlesDW"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("name", "username", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Charles"], ["username", "CharlesDW"], ["email", "CharlesDW@gmail.com"], ["created_at", "2022-09-07 20:30:09.711082"], ["updated_at", "2022-09-07 20:30:09.711082"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."title" = ? AND "events"."location" = ? AND "events"."starts" = ? LIMIT ?[0m  [["title", "Morning Prayer"], ["location", "Main Room"], ["starts", "2022-08-30 00:00:00"], ["LIMIT", 1]]
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "activity", "description", "location", "starts", "ends", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Morning Prayer"], ["activity", "Regular Service"], ["description", "E"], ["location", "Main Room"], ["starts", "2022-08-30 00:00:00"], ["ends", "2022-08-30 00:00:00"], ["created_at", "2022-09-07 20:30:09.731455"], ["updated_at", "2022-09-07 20:30:09.731455"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."title" = ? AND "events"."location" = ? AND "events"."starts" = ? LIMIT ?[0m  [["title", "Community Gardening"], ["location", "Reston"], ["starts", "2022-09-01 00:00:00"], ["LIMIT", 1]]
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("title", "activity", "description", "location", "starts", "ends", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Community Gardening"], ["activity", "Community Service"], ["description", "E"], ["location", "Reston"], ["starts", "2022-09-01 00:00:00"], ["ends", "2022-09-01 00:00:00"], ["created_at", "2022-09-07 20:30:09.735939"], ["updated_at", "2022-09-07 20:30:09.735939"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."title" = ? AND "events"."location" = ? AND "events"."starts" = ? LIMIT ?[0m  [["title", "Community Jungle Gym Fundraiser"], ["location", "Herndon"], ["starts", "2022-02-14 00:00:00"], ["LIMIT", 1]]
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("title", "activity", "description", "location", "starts", "ends", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Community Jungle Gym Fundraiser"], ["activity", "Community Service"], ["description", "E"], ["location", "Herndon"], ["starts", "2022-02-14 00:00:00"], ["ends", "2022-10-25 00:00:00"], ["created_at", "2022-09-07 20:30:09.741378"], ["updated_at", "2022-09-07 20:30:09.741378"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."title" = ? AND "events"."location" = ? AND "events"."starts" = ? LIMIT ?[0m  [["title", "Late Service"], ["location", "Main Room"], ["starts", "2022-08-26 00:00:00"], ["LIMIT", 1]]
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("title", "activity", "description", "location", "starts", "ends", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Late Service"], ["activity", "Regular Service"], ["description", "E"], ["location", "Main Room"], ["starts", "2022-08-26 00:00:00"], ["ends", "2022-08-26 00:00:00"], ["created_at", "2022-09-07 20:30:09.747318"], ["updated_at", "2022-09-07 20:30:09.747318"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEvent Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."title" = ? AND "events"."location" = ? AND "events"."starts" = ? LIMIT ?[0m  [["title", "Weekend Potluck"], ["location", "Franklin Park"], ["starts", "2022-09-16 00:00:00"], ["LIMIT", 1]]
+  [1m[36mEvent Create (0.7ms)[0m  [1m[32mINSERT INTO "events" ("title", "activity", "description", "location", "starts", "ends", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Weekend Potluck"], ["activity", "Outside Service"], ["description", "E"], ["location", "Franklin Park"], ["starts", "2022-09-16 00:00:00"], ["ends", "2022-09-16 00:00:00"], ["created_at", "2022-09-07 20:30:09.754054"], ["updated_at", "2022-09-07 20:30:09.754054"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEventList Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "event_lists" WHERE "event_lists"."title" = ? AND "event_lists"."title" = ? AND "event_lists"."eventType" = ? LIMIT ?[0m  [["title", "Prayers"], ["title", "Prayers"], ["eventType", "General Service"], ["LIMIT", 1]]
+  [1m[36mEventList Create (0.5ms)[0m  [1m[32mINSERT INTO "event_lists" ("title", "eventType", "admin_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Prayers"], ["eventType", "General Service"], ["admin_id", 1], ["event_id", 1], ["created_at", "2022-09-07 20:30:09.786342"], ["updated_at", "2022-09-07 20:30:09.786342"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  [1m[36mEventList Load (0.2ms)[0m  [1m[34mSELECT "event_lists".* FROM "event_lists"[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mEventList Load (0.2ms)[0m  [1m[34mSELECT "event_lists".* FROM "event_lists"[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m

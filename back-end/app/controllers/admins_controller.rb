@@ -13,7 +13,6 @@ class AdminsController < ApplicationController
         else
             render json: { errors: "No Active Sessions" }, status: :unauthorized #401
         end
-
     end
 
     private
