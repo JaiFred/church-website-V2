@@ -22,11 +22,12 @@ puts "seeding Events 🌱"
 # t.datetime "created_at", null: false
 # t.datetime "updated_at", null: false
 
-e1 = Event.create(title: "Morning Prayer", activity: "Regular Service", description: "", location: "Main Room", starts: "8/30/2022", ends: "8/30/2022")
-e2 = Event.create(title: "Community Gardening", activity: "Community Service", description: "", location: "Reston", starts: "9/1/2022", ends: "9/1/2022")
-e3 = Event.create(title: "Community Jungle Gym Fundraiser", activity: "Community Service", description: "", location: "Herndon", starts: "2/14/2022", ends: "10/25/2022")
-e4 = Event.create(title: "Late Service", activity: "Regular Service", description: "", location: "Main Room", starts: "8/26/2022", ends: "8/26/2022")
+e1 = Event.create(title: "Morning Prayer", activity: "Regular Service", description: "", location: "Main Room", :starts => DateTime.strptime("8/30/2022","%m/%d/%Y"), :ends => DateTime.strptime("8/30/2022","%m/%d/%Y"))
+e2 = Event.create(title: "Community Gardening", activity: "Community Service", description: "", location: "Reston", :starts => DateTime.strptime("9/1/2022","%m/%d/%Y"), :ends => DateTime.strptime("9/1/2022","%m/%d/%Y"))
+e3 = Event.create(title: "Community Jungle Gym Fundraiser", activity: "Community Service", description: "", location: "Herndon", :starts => DateTime.strptime("2/14/2022","%m/%d/%Y"), :ends => DateTime.strptime("10/25/2022","%m/%d/%Y"))
+e4 = Event.create(title: "Late Service", activity: "Regular Service", description: "", location: "Main Room", :starts  => DateTime.strptime("8/26/2022","%m/%d/%Y"), :ends => DateTime.strptime("8/26/2022","%m/%d/%Y"))
 e5 = Event.create(title: "Weekend Potluck", activity: "Outside Service", description: "", location: "Franklin Park", starts: "9/16/2022", ends: "9/16/2022")
+
 
 puts "seeding EventLists 🌱"
 
