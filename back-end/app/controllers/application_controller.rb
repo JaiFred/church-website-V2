@@ -5,10 +5,10 @@ class ApplicationController < ActionController::API
 
     before_action :authenticate_admin
 
-    private
+private
 
   def current_admin
-    @current_admin ||= Admin.find_by(session[:admin_id])
+    @current_admin ||= Admin.find_by_id(session[:admin_id])
   end
 
   def authenticate_admin

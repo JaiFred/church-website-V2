@@ -7,7 +7,7 @@ class AdminsController < ApplicationController
 
     # get '/me'
     def show 
-        current_admin = Admin.find(session[:admin_id])
+        current_admin = Admin.find_by_id(session[:admin_id])
         if current_admin
             render json: current_admin, status: :ok
         else
