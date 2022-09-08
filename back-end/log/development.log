@@ -2305,3 +2305,387 @@ Migrating to AddPasswordDigestToAdmins (20220906202717)
   [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
   [1m[36mEventList Load (0.2ms)[0m  [1m[34mSELECT "event_lists".* FROM "event_lists"[0m
+Started GET "/me" for 127.0.0.1 at 2022-09-08 14:03:25 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminsController#show as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 404 Not Found in 24ms (Views: 4.5ms | ActiveRecord: 0.4ms | Allocations: 6911)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-08 14:03:29 -0400
+  
+SyntaxError (/Users/jaivonfrederick/Development/code/phase-5/church-website-V2/back-end/app/controllers/sessions_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/sessions_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/sessions_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/sessions_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/login" for 127.0.0.1 at 2022-09-08 14:12:28 -0400
+  
+SyntaxError (/Users/jaivonfrederick/Development/code/phase-5/church-website-V2/back-end/app/controllers/sessions_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/sessions_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/sessions_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/sessions_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/me" for 127.0.0.1 at 2022-09-08 14:12:36 -0400
+Processing by AdminsController#show as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 404 Not Found in 8ms (Views: 2.9ms | Allocations: 609)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-08 14:14:31 -0400
+Processing by AdminsController#show as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 404 Not Found in 3ms (Views: 0.8ms | Allocations: 610)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-08 14:20:26 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminsController#show as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 404 Not Found in 25ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 6878)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-08 14:20:34 -0400
+  
+SyntaxError (/Users/jaivonfrederick/Development/code/phase-5/church-website-V2/back-end/app/controllers/sessions_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/sessions_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/sessions_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/sessions_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/me" for 127.0.0.1 at 2022-09-08 14:22:48 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminsController#show as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 404 Not Found in 18ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 6878)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-08 14:22:54 -0400
+Processing by SessionsController#create_admin as */*
+  Parameters: {"username"=>"CharlesDW", "password"=>"[FILTERED]", "session"=>{"username"=>"CharlesDW", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."username" = ? LIMIT ?[0m  [["username", "CharlesDW"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create_admin'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.6ms | Allocations: 8286)
+
+
+  
+NameError (undefined local variable or method `member' for #<SessionsController:0x0000000000b338>):
+  
+app/controllers/sessions_controller.rb:7:in `create_admin'
+Started GET "/me" for 127.0.0.1 at 2022-09-08 14:24:29 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminsController#show as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 404 Not Found in 21ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 6878)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-08 14:24:34 -0400
+Processing by SessionsController#create_admin as */*
+  Parameters: {"username"=>"CharlesDW", "password"=>"[FILTERED]", "session"=>{"username"=>"CharlesDW", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."username" = ? LIMIT ?[0m  [["username", "CharlesDW"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create_admin'
+[active_model_serializers] Rendered AdminSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 368ms (Views: 13.8ms | ActiveRecord: 1.1ms | Allocations: 9228)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:32:44 -0400
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:32:44 -0400
+Processing by SessionsController#destroy_admin as */*
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 1ms (Allocations: 637)
+
+
+Completed 500 Internal Server Error in 7ms (Allocations: 1029)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Started GET "/me" for 127.0.0.1 at 2022-09-08 14:32:46 -0400
+Processing by AdminsController#show as */*
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/admins_controller.rb:10:in `show'
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:10:in `show'
+[active_model_serializers] Rendered AdminSerializer with ActiveModelSerializers::Adapter::Attributes (1.86ms)
+Completed 200 OK in 13ms (Views: 3.7ms | ActiveRecord: 2.1ms | Allocations: 2002)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:32:49 -0400
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 619)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:32:49 -0400
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 620)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Started GET "/me" for 127.0.0.1 at 2022-09-08 14:32:51 -0400
+Processing by AdminsController#show as */*
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:10:in `show'
+[active_model_serializers] Rendered AdminSerializer with ActiveModelSerializers::Adapter::Attributes (0.83ms)
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 880)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:33:29 -0400
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:33:29 -0400
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 624)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 624)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Started GET "/me" for 127.0.0.1 at 2022-09-08 14:33:30 -0400
+Processing by AdminsController#show as */*
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:10:in `show'
+[active_model_serializers] Rendered AdminSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 876)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:33:36 -0400
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 623)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:33:36 -0400
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 624)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Started GET "/me" for 127.0.0.1 at 2022-09-08 14:33:37 -0400
+Processing by AdminsController#show as */*
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:10:in `show'
+[active_model_serializers] Rendered AdminSerializer with ActiveModelSerializers::Adapter::Attributes (0.51ms)
+Completed 200 OK in 13ms (Views: 5.2ms | ActiveRecord: 0.4ms | Allocations: 909)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:35:29 -0400
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 627)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:35:29 -0400
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 628)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Started GET "/me" for 127.0.0.1 at 2022-09-08 14:35:31 -0400
+Processing by AdminsController#show as */*
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:10:in `show'
+[active_model_serializers] Rendered AdminSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 880)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:37:18 -0400
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:37:18 -0400
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 701)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 632)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Started GET "/me" for 127.0.0.1 at 2022-09-08 14:37:20 -0400
+Processing by AdminsController#show as */*
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:10:in `show'
+[active_model_serializers] Rendered AdminSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 884)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-08 14:37:30 -0400
+Processing by AdminsController#show as */*
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:10:in `show'
+[active_model_serializers] Rendered AdminSerializer with ActiveModelSerializers::Adapter::Attributes (0.72ms)
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 875)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:37:33 -0400
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:37:33 -0400
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 618)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 618)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Started GET "/me" for 127.0.0.1 at 2022-09-08 14:37:34 -0400
+Processing by AdminsController#show as */*
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:10:in `show'
+[active_model_serializers] Rendered AdminSerializer with ActiveModelSerializers::Adapter::Attributes (0.7ms)
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 920)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:37:54 -0400
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:37:54 -0400
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 636)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 636)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Started GET "/me" for 127.0.0.1 at 2022-09-08 14:37:56 -0400
+Processing by AdminsController#show as */*
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:10:in `show'
+[active_model_serializers] Rendered AdminSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 888)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-09-08 14:38:06 -0400
+Processing by AdminsController#show as */*
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:10:in `show'
+[active_model_serializers] Rendered AdminSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 883)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:40:13 -0400
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:40:13 -0400
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 624)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 624)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Started GET "/me" for 127.0.0.1 at 2022-09-08 14:40:14 -0400
+Processing by AdminsController#show as */*
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:10:in `show'
+[active_model_serializers] Rendered AdminSerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 876)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:40:21 -0400
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-08 14:40:21 -0400
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 634)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Processing by SessionsController#destroy_admin as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 632)
+
+
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/application_controller.rb:11:in `current_admin'
+app/controllers/sessions_controller.rb:17:in `destroy_admin'
+Started GET "/me" for 127.0.0.1 at 2022-09-08 14:40:23 -0400
+Processing by AdminsController#show as */*
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:10:in `show'
+[active_model_serializers] Rendered AdminSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 885)
+
+
