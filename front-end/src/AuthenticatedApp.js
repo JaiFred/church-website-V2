@@ -2,6 +2,7 @@ function AuthenticatedApp(){
 
     return(
         <div>
+            Random
         </div>
     )
 }

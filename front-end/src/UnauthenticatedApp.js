@@ -1,5 +1,5 @@
-import { Route, Navigate } from 'react-router-dom';
-import { BrowserRouter as Router} from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
+
 
 import Login from './Login';
 
@@ -9,10 +9,11 @@ function UnauthenticatedApp({ setCurrentAdmin }){
         <div>
             <div>
         {/* <NavBar setCurrentMember={setCurrentMember}/> */}
-        <Router>
+        <Routes>
             {/* <Route path="/bulletins" element={<BulletinContainer showBulletins={showBulletins} setShowBulletins={setShowBulletins}/>}/> */}
             <Route path="/login" element={<Login setCurrentAdmin={setCurrentAdmin}/>}/>
-        </Router>
+            <Route path="/" element={<Navigate replace to="/login"/>}/>
+        </Routes>
         </div>
         </div>
     )
