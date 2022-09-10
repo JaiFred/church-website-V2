@@ -12,7 +12,7 @@ function UnauthenticatedApp({ setCurrentAdmin }){
         <Routes>
             {/* <Route path="/bulletins" element={<BulletinContainer showBulletins={showBulletins} setShowBulletins={setShowBulletins}/>}/> */}
             <Route path="/login" element={<Login setCurrentAdmin={setCurrentAdmin}/>}/>
-            <Route path="/" element={<Navigate replace to="/login"/>}/>
+            {/* <Route path="/login" element={<Navigate replace to="/"/>}/> */}
         </Routes>
         </div>
         </div>

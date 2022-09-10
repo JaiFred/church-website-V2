@@ -34,7 +34,6 @@ function App() {
   if(!currentAdmin) <Login setCurrentAdmin={setCurrentAdmin} />
   return (
     <div className="App">
-      hello
       { currentAdmin ? (
       
       <AuthenticatedApp

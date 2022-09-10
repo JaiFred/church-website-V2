@@ -1,3 +1,48 @@
+.top {
+  width: 400px;
+  height: 400px;
+  margin: 0px;
+  display: inline-block;
+  margin-top: 10px;
+  border: 1px solid;
+  padding: 5px;
+}
+
+.events-box {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0 10px;
+  width: 25%;
+  gap: 10px 20px;
+}
+
+.listed{
+  width: 100%;
+  height: 100%;
+}
+
+.event-id {
+  font-size: 20px;
+  }
+
+.event-title {
+  font-size: 20px;
+}
+
+.delete_button{
+  width: 50px;
+  height: 50px;
+}
+
+
+
+ 
+
+
 .App {
   text-align: center;
 }

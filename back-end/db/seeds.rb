@@ -22,6 +22,9 @@ puts "seeding Events 🌱"
 # t.datetime "created_at", null: false
 # t.datetime "updated_at", null: false
 
+# "%B, %d, %Y"
+
+
 e1 = Event.create!(title: "Morning Prayer", activity: "Regular Service", description: "E", location: "Main Room", :starts => DateTime.strptime("8/30/2022","%m/%d/%Y"), :ends => DateTime.strptime("8/30/2022","%m/%d/%Y"))
 e2 = Event.create!(title: "Community Gardening", activity: "Community Service", description: "E", location: "Reston", :starts => DateTime.strptime("9/1/2022","%m/%d/%Y"), :ends => DateTime.strptime("9/1/2022","%m/%d/%Y"))
 e3 = Event.create!(title: "Community Jungle Gym Fundraiser", activity: "Community Service", description: "E", location: "Herndon", :starts => DateTime.strptime("2/14/2022","%m/%d/%Y"), :ends => DateTime.strptime("10/25/2022","%m/%d/%Y"))
